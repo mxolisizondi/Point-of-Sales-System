@@ -27,4 +27,4 @@ To use this project follow this steps
   In the System they are two type of users supervisor and cashier
   Go to your table employees to find login details 
   To scan the product use product id find it in product table
-For the database use backup file or scripts one of them.
+For the database use backup file or scripts one of them ADSAssigment.bak for backup and script.sql to use script
