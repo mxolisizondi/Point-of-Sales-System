@@ -1,0 +1,41 @@
+﻿<Page x:Class="Examples.ManageEmployees"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Examples"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="750" 
+      Title="ManageEmployees">
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="22*"/>
+                <ColumnDefinition Width="153*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Height="280" VerticalAlignment="Top" Grid.ColumnSpan="2">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2281D1"/>
+                        <GradientStop Color="#FF34268A" Offset="1"/>
+                        <GradientStop Color="#FF33288B" Offset="0.546"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Image Source="Images/Supervisor.png" Width="100" Height="100" VerticalAlignment="Top" Margin="227,24,329,0" Grid.Column="1"/>
+            <Rectangle Height="467" VerticalAlignment="Bottom" Margin="10,0,10,54" RadiusY="10" RadiusX="10" Fill="White" Grid.ColumnSpan="2">
+                <Rectangle.Effect>
+                    <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Grid Height="403" VerticalAlignment="Bottom" Margin="105,0,214,100" Grid.Column="1">
+                <TextBlock Text="Manage Employees" HorizontalAlignment="Center" Margin="5" Foreground="Gray" FontSize="18"/>
+            </Grid>
+            <Button x:Name="btnAddEmployee" Width="168" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="68,0,514,389" Content="Add Employee" Grid.ColumnSpan="2" Height="74" Click="BtnAddEmployee"/>
+            <Button x:Name="btnEditEmployee" Width="179" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="411,0,66,389" Content="Edit Employee Details" Grid.Column="1" Height="74" Click="BtnEditEmployee"/>
+            <Button x:Name="btnDeleteEmployee_Copy" Width="179" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="411,0,66,235" Content="Discontinue Employee" Height="89" Click="BtnDeleteEmployee" Grid.Column="1"/>
+            <Button x:Name="btnVeiwAllEmployees" Width="168" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="68,0,514,235" Content="Veiw All Employees" Grid.ColumnSpan="2" Height="89" Click="BtnVeiwAllEmployee"/>
+        </Grid>
+    </Grid>
+</Page>
