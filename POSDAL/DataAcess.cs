@@ -225,7 +225,7 @@ namespace POSDAL
                 if(dataReader.HasRows)
                 {
                     dataReader.Read();
-                    MailMessage mail = new MailMessage("mxolisizondi@gmail.com", dataReader["Email"].ToString());
+                    MailMessage mail = new MailMessage("example@gmail.com", dataReader["Email"].ToString());
                     mail.Subject = "Decrease in Stock";
                     mail.Body = "Hey\nIt the manager of MUT Tuck Shop\nWe running out of stock of " + dataReader["ProductName"].ToString() + "\nPlease supply us with stock As soon as possible\n\nThanks in advance";
                     SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
@@ -233,8 +233,8 @@ namespace POSDAL
                     client.DeliveryMethod = SmtpDeliveryMethod.Network;
                     client.Credentials = new System.Net.NetworkCredential()
                     {
-                        UserName = "mxolisizondi20@gmail.com",
-                        Password = "mxolisizondi20"
+                        UserName = "example@gmail.com",
+                        Password = "password"
                     };
                     client.EnableSsl = true;
                     {
